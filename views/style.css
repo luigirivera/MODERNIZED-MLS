@@ -1,0 +1,172 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.h2 .day{
+  background-image: url("day header.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.h2 .night{
+  background-image: url("night header.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header{
+  text-align: center;
+}
+
+h2{
+  padding:10px;
+  width: inherit;
+}
+
+body{
+  height: 100%;
+  background: rgb(255, 255, 255);
+}
+
+.navigationMenu{
+  overflow: hidden;
+  width: 100%;
+  background-color: rgb(100,255,150);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navigationMenu a{
+  float: left;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navigationMenu a:hover, .about:hover .aboutbtn, .enrollment:hover .enrollmentbtn,
+.status:hover .statusbtn, .student-services:hover .student-servicesbtn,
+.leap:hover .leapbtn, .green-purse:hover .green-pursebtn, .extra:hover .extrabtn,
+.external-services:hover .external-servicesbtn, .google:hover .googlebtn {
+  background-color: rgb(10,150,50);
+  color: rgb(255,255,255);
+}
+
+.active{
+  background-color: rgb(10,150,50);
+  color: rgb(255,255,255);
+}
+
+.about, .enrollment, .status, .student-services, .leap, .extra, .green-purse,
+.external-services, .google{
+  float: left;
+  overflow: hidden;
+}
+
+.about .aboutbtn, .enrollment .enrollmentbtn, .status .statusbtn,
+.student-services .student-servicesbtn, .leap .leapbtn, .extra .extrabtn,
+.external-services .external-servicesbtn, .google .googlebtn,
+.green-purse .green-pursebtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.about-content, .enrollment-content, .status-content, .student-services-content,
+.leap-content, .green-purse-content, .extra-content, .external-services-content,
+.google-content{
+  display: none;
+  position: relative;
+  background-color: rgb(100,255,150);
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.about-content a, .enrollment-content a, .status-content a, .student-services-content a,
+.leap-content a, .green-purse-content a, .external-services-content a, .google-content a,
+.extra-content a{
+  float: left;
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.about:hover .about-content, .enrollment:hover .enrollment-content,
+.status:hover .status-content, .student-services:hover .student-services-content,
+.leap:hover .leap-content, .extra:hover .extra-content, .external-services:hover
+.external-services-content, .google:hover .google-content,
+.green-purse:hover .green-purse-content{
+  display: block;
+  position: absolute;
+}
+
+.navigationMenu .icon{
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .about .aboutbtn, .enrollment .enrollmentbtn, .status .statusbtn,
+  .student-services .student-servicesbtn, .leap .leapbtn, .extra .extrabtn,
+  .external-services .external-servicesbtn, .google .googlebtn,
+  .green-purse .green-pursebtn{
+    display: none;
+  }
+
+  .navigationMenu a.icon{
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navigationMenu.responsive{
+    position: relative;
+  }
+
+  .navigationMenu.responsive a.icon{
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .navigationMenu.responsive a{
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .navigationMenu.responsive .about, .navigationMenu.responsive .enrollment,
+  .navigationMenu.responsive .status, .navigationMenu.responsive .student-services,
+  .navigationMenu.responsive .leap, .navigationMenu.responsive .green-purse,
+  .navigationMenu.responsive .extra, .navigationMenu.responsive .external-services,
+  .navigationMenu.responsive .google{
+    float: none;
+  }
+
+  .navigationMenu.responsive .about-content, .navigationMenu.responsive .enrollment-content,
+  .navigationMenu.responsive .student-services-content, .navigationMenu.responsive .extra-content{
+    position: relative;
+    background-color: rgb(255,255,255);
+  }
+
+  .navigationMenu.responsive .about .aboutbtn, .navigationMenu.responsive .enrollment .enrollmentbtn,
+  .navigationMenu.responsive .status .statusbtn, .navigationMenu.responsive .student-services .student-servicesbtn,
+  .navigationMenu.responsive .leap .leapbtn, .navigationMenu.responsive .green-purse .green-pursebtn,
+  .navigationMenu.responsive .extra .extrabtn, .navigationMenu.responsive .external-services .external-servicesbtn,
+  .navigationMenu.responsive .google .googlebtn{
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
